@@ -1,0 +1,570 @@
+<! doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
+
+<!-- Custom CSS -->
+    <link href="custom_css/main.css" rel="stylesheet" type='text/css'>  
+
+	  
+<!---Font Awesome--->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<!--font family-->
+<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+	
+
+</head>  
+  
+<body data-spy="scroll" data-target=".navbar" data-offset="50"> 
+
+<!--Navigation-->	 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+<div class="conatiner-fluid">
+     <!--page scroll button for -->
+   <div class="navbar-header" role="navigation">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target= "#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>			
+     </button>
+	   <a class="navbar-brand" href="main.html">Comfi Travels</a>
+   </div>	<!--page scroll button-->
+   
+   <div>
+   <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="main.html">Home</a></li>
+        <li ><a href="about.html">About</a></li> 
+		<li ><a href="contact.html">Contact</a></li> 
+		<li ><a href="cancellation.html">Cancellation</a></li>
+        <li ><a href="#sign in/sign up" data-toggle="modal" data-target="#myModal">Sign in /Sign up</a></li>
+      </ul>
+	  </div> <!--ul-li-->
+	 </div> <!--navbar collapse-->
+  </div> <!--container-fluid-->
+</nav>
+<!--Navigation-->
+
+
+<!--Table-->
+<div class="panel panel-primary">
+      <div class="panel-heading">Available Trips</p></div>
+      <div class="panel-body">
+          
+  <table class="table table-hover table-box">
+    <thead>	 
+      <tr>
+        <th>Route Name</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+		<th>Available Seats</th>
+		<th>Fare</th>
+		<th>Search</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Banglore-Pune</td>
+        <td>07:00 PM</td>
+        <td>07:00 AM</td>
+		<td></td>
+		<td>Rs 1200</td>
+		<td><button type="submit" class="btn btn-default btn-success btn-block" id="click" value="Show/Hide"><span class="glyphicon glyphicon-off"></span>Search</button>
+ 
+	   <div id="search-box">
+	   <div class="row" >
+	   <div class="col-md-8">
+    <table>
+  
+  <tr>
+    <td><input type="button" class="button"  value="1"  /></td>
+    <td><input type="button" class="button"  value="2"  /></td>
+    <td><input type="button" class="button"  value="3"  /></td>
+	<td><input type="button" class="button"  value="4"  /></td>
+    <td><input type="button" class="button"  value="5"  /></td>
+    <td><input type="button" class="button"  value="6"  /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="button" class="button"  value="7"  /></td>
+    <td><input type="button" class="button"  value="8"  /></td>
+    <td><input type="button" class="button"  value="9"  /></td>
+	<td><input type="button" class="button"  value="10" /></td>
+    <td><input type="button" class="button"  value="11" /></td>
+    <td><input type="button" class="button"  value="12" /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="button" class="button"  value="13" /></td>
+    <td><input type="button" class="button"  value="14" /></td>
+    <td><input type="button" class="button"  value="15" /></td>
+	<td><input type="button" class="button"  value="16" /></td>
+    <td><input type="button" class="button"  value="17" /></td>
+    <td><input type="button" class="button"  value="18" /></td>
+  </tr>
+  
+   <tr>
+    <td><input type="button" class="button"  value="19" /></td>
+    <td><input type="button" class="button"  value="20" /></td>
+    <td><input type="button" class="button"  value="21" /></td>
+	<td><input type="button" class="button"  value="22" /></td>
+    <td><input type="button" class="button"  value="23" /></td>
+    <td><input type="button" class="button"  value="24" /></td>
+  </tr>
+  
+</table>
+</div><!--row div -->
+
+<div class="col-md-4">
+   <div class="row">
+    <div class="col-md-5" id="booked">Booked</div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5" id="available">Available</div>
+  </div>
+</div>
+
+</div><!--div grid row-->
+
+
+
+
+<div id="booking-form" style="display:none;">
+<form class="form-inline">
+  <div class="form-group" style="margin:10px;">
+    <label for="firstName"><span class="glyphicon glyphicon-user"></span>Name</label>
+    <input type="text" class="form-control" id="firstName" placeholder="Name" required>
+  </div>
+  <div class="form-group" style="margin:10px;">
+    <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" required>
+  </div></br>
+  <div class="form-group"style="margin:10px;">
+    <label for="phonenum"><span class="glyphicon glyphicon-phone"></span>Phone Number (format: xxxx-xxxxxx)</label>
+    <input type="tel" pattern="^\d{4}-\d{6}$" class="form-control"  placeholder="Number"required>    
+  </div>
+   <div class="form-group">
+        <div class="row"> 
+		    <div class="col-md-3">
+                <label class="control-label col-md-6">Gender</label>
+            </div>                       
+            <div class="col-sm-3">
+                <label class="radio-inline">
+                <input type="radio" name="radio-choice"  required>Female
+                </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="radio-inline">
+                <input type="radio"  name="radio-choice" required >Male
+                </label>
+            </div>                       
+        </div>		
+	</div>			 
+  <button type="submit" class="btn btn-default btn-success" data-toggle="modal" data-target="#login_modal" >Confirm Booking</button>
+  
+</div><!--booking form-->
+<div id="others"></div>      
+</div><!--search-box-->
+</td>
+
+
+<!--Modal1 at button---->
+<div class="modal fade" id="login_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Please Login to Book</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default btn-success btn-block" data-dismiss="modal" onclick="location.href = 'payment.html';"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" ><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a data-dismiss="modal" data-toggle="modal" data-target="#register_modal">Sign up</a></p>          
+        </div>
+      </div>
+    </div>
+  </div>  
+
+<!--Modal1 at button---->
+
+<!---Modal2 at button---->
+<div class="modal fade" id="register_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span>Please Register to Book</h4>
+        </div>
+       <div class="modal-body">
+            <form role="form">
+            <div class="form-group">
+              <label for="firstName"><span class="glyphicon glyphicon-user"></span>Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Name" required>
+            </div>
+			<div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-envelope"></span>Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+			
+			<div class="form-group">
+                    <label for="phonenum"><span class="glyphicon glyphicon-phone"></span>Phone Number (format: xxxx-xxxxxx)</label>
+                    <input type="tel" pattern="^\d{4}-\d{6}$" class="form-control"  placeholder="Number"required>    
+                </div>
+				
+                <div class="form-group">
+                    <label for="birthDate"><span class="glyphicon glyphicon-calendar"></span>Date of Birth</label>
+                    <input type="date" id="birthDate" class="form-control" required>
+               </div>
+			   
+			   <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="radio-choice"  required>Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio"  name="radio-choice" required >Male
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+					
+					<div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" required>I accept <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!--form-group -->
+			     
+         
+            <button type="button" class="btn btn-default btn-success btn-block" data-dismiss="modal"
+			data-toggle="modal" data-target="#login_modal" ><span class="glyphicon glyphicon-off"></span> Register</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+		  <p>Already a member?<a data-dismiss="modal" data-toggle="modal" data-target="#login_modal">Sign in</a></p> 
+        </div>
+      </div>
+    </div>
+ </div>  
+<!---Modal2 at button---->
+
+
+
+
+
+
+
+
+      </tr>
+      <tr>
+        <td>Banglore-Pune</td>
+        <td>09:00 PM</td>
+        <td>07:00 AM</td>
+		<td></td>
+		<td>Rs 2000</td>
+		<td> <button type="submit" class="btn btn-default btn-success btn-block" id="press" value="Show/Hide"><span class="glyphicon glyphicon-off"></span>Search</button>
+		<div id="search">
+		<div class="row">
+	   <div class="col-md-8">
+    <table>
+  
+  <tr>
+    <td><input type="button" class="buttons"  value="1"  /></td>
+    <td><input type="button" class="buttons"  value="2"  /></td>
+    <td><input type="button" class="buttons"  value="3" /></td>
+	<td><input type="button" class="buttons"  value="4" /></td>
+    <td><input type="button" class="buttons"  value="5"  /></td>
+    <td><input type="button" class="buttons"  value="6" /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="button" class="buttons"  value="7"  /></td>
+    <td><input type="button" class="buttons"  value="8"  /></td>
+    <td><input type="button" class="buttons"  value="9"  /></td>
+	<td><input type="button" class="buttons"  value="10" /></td>
+    <td><input type="button" class="buttons"  value="11" /></td>
+    <td><input type="button" class="buttons"  value="12" /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="button" class="buttons"  value="13" /></td>
+    <td><input type="button" class="buttons"  value="14" /></td>
+    <td><input type="button" class="buttons"  value="15" /></td>
+	<td><input type="button" class="buttons"  value="16" /></td>
+    <td><input type="button" class="buttons"  value="17" /></td>
+    <td><input type="button" class="buttons"  value="18" /></td>
+  </tr>
+  
+   <tr>
+    <td><input type="button" class="buttons"  value="19" /></td>
+    <td><input type="button" class="buttons"  value="20" /></td>
+    <td><input type="button" class="buttons"  value="21" /></td>
+	<td><input type="button" class="buttons"  value="22" /></td>
+    <td><input type="button" class="buttons"  value="23" /></td>
+    <td><input type="button" class="buttons"  value="24" /></td>
+  </tr>
+
+</table>
+</div><!--row div -->
+
+<div class="col-md-4">
+   <div class="row">
+    <div class="col-md-5" id="booked">Booked</div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5" id="available">Available</div>
+  </div>
+</div>
+
+</div><!--div grid row-->
+
+
+<div id="booking" style="display:none;">
+<form class="form-inline">
+  <div class="form-group" style="margin:10px;">
+    <label for="firstName"><span class="glyphicon glyphicon-user"></span>Name</label>
+    <input type="text" class="form-control" id="firstName" placeholder="Name" required>
+  </div>
+  <div class="form-group" style="margin:10px;">
+    <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" required>
+  </div></br>
+  <div class="form-group"style="margin:10px;">
+    <label for="phonenum"><span class="glyphicon glyphicon-phone"></span>Phone Number (format: xxxx-xxxxxx)</label>
+    <input type="tel" pattern="^\d{4}-\d{6}$" class="form-control"  placeholder="Number"required>    
+  </div>
+   <div class="form-group">
+        <div class="row"> 
+		    <div class="col-md-3">
+                <label class="control-label col-md-6">Gender</label>
+            </div>                       
+            <div class="col-sm-3">
+                <label class="radio-inline">
+                <input type="radio" name="radio-choice"  required>Female
+                </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="radio-inline">
+                <input type="radio"  name="radio-choice" required >Male
+                </label>
+            </div>                       
+        </div>		
+	</div>			 
+  <button type="submit" onclick="location.href = 'pqr.html';" class="btn btn-default btn-success" >Confirm Booking</button>
+</div><!--booking form-->
+<div id="other"></div>       
+</div><!--search-box-->
+</td>
+
+
+      </tr>
+      
+    </tbody>
+  </table>
+
+</div>
+</div>
+</div>
+<!--Table-->
+
+<!--Footer Navigation-->
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    
+    <ul class="list-inline">
+      <li> <a href="main.html">Home</a></li>
+		  <li><a href="about.html">About</a> </li>
+		  <li> <a href="contact.html">Contact</a> </li>
+		  	<li ><a href="cancellation.html">Cancellation</a></li>
+          <li ><a href="#sign in/sign up" data-toggle="modal" data-target="#myModal">Sign in /Sign up</a></li>
+    </ul>
+	 
+  </div>
+</nav>
+<!--Footer Navigation-->
+
+ <!-- Modal -->
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a data-dismiss="modal" data-toggle="modal" data-target="#register">Sign up</a></p> 
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+<!---Modal1---->
+
+<!---Modal2---->
+<div class="modal fade" id="register" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span>Register</h4>
+        </div>
+       <div class="modal-body">
+            <form role="form">
+            <div class="form-group">
+              <label for="firstName"><span class="glyphicon glyphicon-user"></span>Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Name" required>
+            </div>
+			<div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-envelope"></span>Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+			
+			<div class="form-group">
+                    <label for="phonenum"><span class="glyphicon glyphicon-phone"></span>Phone Number (format: xxxx-xxxxxx)</label>
+                    <input type="tel" pattern="^\d{4}-\d{6}$" class="form-control"  placeholder="Number"required>    
+                </div>
+				
+                <div class="form-group">
+                    <label for="birthDate"><span class="glyphicon glyphicon-calendar"></span>Date of Birth</label>
+                    <input type="date" id="birthDate" class="form-control" required>
+               </div>
+			   
+			   <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" name="radio-choice"  required>Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio"  name="radio-choice" required >Male
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+					
+					<div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" required>I accept <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!--form-group -->
+			     
+         
+            <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Register</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+		  <p>Already a member?<a data-dismiss="modal" data-toggle="modal" data-target="#myModal">Sign in</a></p> 
+        </div>
+      </div>
+    </div>
+ </div>  
+<!---Modal2---->
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+    	
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+
+<!--Custome Jquery-->
+<script src="custom_js/main.js"></script>
+
+
+</body>
+
+</html>	
